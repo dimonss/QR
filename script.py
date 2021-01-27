@@ -39,3 +39,5 @@ while(wb_obj.active["B"+str(counter)].value != None):
 	
 
 # https://balance.kg/pay/ServiceCode?requisite=Rakhmanov_Kenzhebaj&notify=996553556411
+
+# https://balance.kg/pay/ServiceCode?requisite=Rakhmanov_Kenzhebaj&notify=996553556411
