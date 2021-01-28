@@ -1,7 +1,5 @@
 import qrcode
 import openpyxl
-from pathlib import Path
-import re
 import os
 import zipfile
 import sys
