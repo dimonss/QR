@@ -4,8 +4,6 @@ import os
 import zipfile
 import sys
 
-
-
 def main():
 	if len(sys.argv) > 1:
 		docName = sys.argv[1]
@@ -45,10 +43,31 @@ def main():
 
 
 	# Generate output link #####################################
+
+		phoneNumber = wb_obj.active["C"+str(counter)].value
+
+		if phoneNumber[0]=="0":
+			phoneNumber = "996"+phoneNumber[1:]
+
+		if phoneNumber[0:5] == "99655" or phoneNumber[0:5] == "99657":
+			print("MEGACOM!!!", phoneNumber)
+			counter+=1
+			continue
+		if phoneNumber[0:6] == "996755" or phoneNumber[0:6] =="996999" or phoneNumber[0:6] == "996998" or phoneNumber[0:6] == "996995" or phoneNumber[0:6] =="996990" or phoneNumber[0:6] == "996997":
+			print("MEGACOM!!!", phoneNumber)
+			counter+=1
+			continue
+		if phoneNumber[0:7] == "9968800" or phoneNumber[0:7] == "9968801" or phoneNumber[0:7] == "9968802" or phoneNumber[0:7] == "9968808" or phoneNumber[0:7] == "9968809":
+			print("MEGACOM!!!", phoneNumber)
+			counter+=1
+			continue
+
+
+
 		data = ("https://balance.kg/pay/"+
 			wb_obj.active["D"+str(counter)].value+
 			wb_obj.active["B2"].value+camel_Snake_Case+
-			wb_obj.active["C2"].value+wb_obj.active["C"+str(counter)].value
+			wb_obj.active["C2"].value+phoneNumber
 			)
 
 
